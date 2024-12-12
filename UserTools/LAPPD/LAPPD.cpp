@@ -86,7 +86,7 @@ bool LAPPD::Initialise(std::string configfile, DataModel &data){
   }
   // parse the configuration to populate the m_variables Store.
   std::stringstream configstream(configtext);
-  if(configtext!="") m_variables.Initialise(configstream);
+  if(configtext!="") m_variables.Initialise(configstream.c_srt());
   
   // allow overrides from local config file
   if(configfile!="")  m_variables.Initialise(configfile);
